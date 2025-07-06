@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gravesend Landscaping Co.</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; transition: background 0.3s, color 0.3s; }
+    .hero-img { background-size: cover; background-position: center; height: 85vh; }
+    .faq-item { border-bottom: 1px solid #ddd; }
+    .faq-question { cursor: pointer; padding: 1rem; font-weight: bold; }
+    .faq-answer { display: none; padding: 1rem; padding-top: 0; }
+    .sticky-contact { position: fixed; bottom: 20px; right: 20px; background: #10b981; color: white; padding: 0.75rem 1rem; border-radius: 9999px; font-weight: bold; z-index: 50; }
+    .dark-mode { background-color: #1a202c; color: #f7fafc; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Sticky Contact Button -->
+  <a href="#contact" class="sticky-contact hover:bg-green-700">Contact Us</a>
+
+  <!-- Header -->
+  <header class="bg-white shadow-md fixed w-full top-0 z-50 dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-green-700 dark:text-green-400">Gravesend Landscaping</h1>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="#services" class="hover:text-green-600 font-semibold dark:text-gray-200">Services</a>
+        <a href="#projects" class="hover:text-green-600 font-semibold dark:text-gray-200">Projects</a>
+        <a href="#contact" class="hover:text-green-600 font-semibold dark:text-gray-200">Contact</a>
+        <button onclick="toggleDarkMode()" class="ml-4 text-sm border px-2 py-1 rounded dark:text-white">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-img flex items-center justify-center text-white text-center mt-16"
+    style="background-image: url('https://source.unsplash.com/1600x900/?landscape,garden');">
+    <div data-aos="fade-up" class="bg-black bg-opacity-50 p-10 rounded-lg">
+      <h2 class="text-4xl font-bold mb-4">Transforming Outdoor Spaces</h2>
+      <p class="text-xl mb-6">Premium Landscaping in Gravesend</p>
+      <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded">Get a Free Quote</a>
+    </div>
+  </section>
+
+  <!-- Animated Stats -->
+  <section class="py-20 bg-white text-center">
+    <h2 class="text-3xl font-bold text-green-700 mb-6">Our Impact</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+      <div>
+        <p class="text-5xl font-bold text-green-600" data-target="300">0</p>
+        <p class="mt-2">Projects Completed</p>
+      </div>
+      <div>
+        <p class="text-5xl font-bold text-green-600" data-target="15">0</p>
+        <p class="mt-2">Years Experience</p>
+      </div>
+      <div>
+        <p class="text-5xl font-bold text-green-600" data-target="98">0</p>
+        <p class="mt-2">Client Satisfaction (%)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Slider -->
+  <section class="py-20 bg-green-50">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-green-700 mb-12">What Our Clients Say</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide text-center">
+            <blockquote class="italic">“Absolutely blown away by the quality. Our garden has never looked better!”</blockquote>
+            <p class="mt-4 font-semibold">– Sarah W., Gravesend</p>
+          </div>
+          <div class="swiper-slide text-center">
+            <blockquote class="italic">“Prompt, professional, and passionate. Highly recommend these guys!”</blockquote>
+            <p class="mt-4 font-semibold">– John K., Kent</p>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-white max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-green-700 mb-6 text-center">FAQs</h2>
+    <div class="faq-item">
+      <div class="faq-question">Do you offer free consultations?</div>
+      <div class="faq-answer">Yes, we provide free no-obligation consultations to understand your needs.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What areas do you cover?</div>
+      <div class="faq-answer">We cover all of Gravesend and surrounding Kent areas.</div>
+    </div>
+  </section>
+
+  
+<!-- Image Gallery Slider -->
+<section class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center text-green-700 mb-12">Gallery</h2>
+    <div class="swiper-container gallery-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://source.unsplash.com/800x500/?landscaping,1" class="rounded shadow w-full" /></div>
+        <div class="swiper-slide"><img src="https://source.unsplash.com/800x500/?landscaping,2" class="rounded shadow w-full" /></div>
+        <div class="swiper-slide"><img src="https://source.unsplash.com/800x500/?landscaping,3" class="rounded shadow w-full" /></div>
+        <div class="swiper-slide"><img src="https://source.unsplash.com/800x500/?landscaping,4" class="rounded shadow w-full" /></div>
+        <div class="swiper-slide"><img src="https://source.unsplash.com/800x500/?landscaping,5" class="rounded shadow w-full" /></div>
+      </div>
+      <div class="swiper-pagination mt-4"></div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-green-50 text-center">
+    <h2 class="text-3xl font-bold text-green-700 mb-4">Contact Us</h2>
+    <p>📞 07700 900123</p>
+    <p>📧 info@gravesendlandscaping.co.uk</p>
+    <p class="text-sm text-gray-500 mt-2">Or use our chatbot (coming soon!)</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white text-center py-6">
+    &copy; 2025 Gravesend Landscaping. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    AOS.init();
+    
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+    const gallerySwiper = new Swiper('.gallery-slider', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+    
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    // Animated Counters
+    document.querySelectorAll('[data-target]').forEach(counter => {
+      let update = () => {
+        let target = +counter.getAttribute('data-target');
+        let current = +counter.innerText;
+        let increment = Math.ceil(target / 100);
+        if (current < target) {
+          counter.innerText = current + increment;
+          setTimeout(update, 40);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      update();
+    });
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(item => {
+      item.addEventListener('click', () => {
+        const answer = item.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+
+    // Dark Mode Toggle
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
